@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sequence_opd" model="ir.sequence">
+        <field name="name">OPD Sequence</field>
+        <field name="code">opd.details</field>
+        <field name="prefix">OPD</field>
+        <field name="padding">2</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <record id="opd_details_action" model="ir.actions.act_window">
+        <field name="name">OPD Details</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">opd.details</field>
+        <field name="view_mode">tree,form,kanban,graph</field>
+        <field name="context">{}</field>
+    </record>
+
+    <record id="opd_details_tree" model="ir.ui.view">
+        <field name="name">opd.details.tree</field>
+        <field name="model">opd.details</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="opd_id"/>
+                <field name="patient_id"/>
+                <field name="patient_number"/>
+                <field name="patient_address"/>
+                <field name="patient_dob"/>
+                <field name="patient_age"/>
+                <field name="doctor_id"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="opd_details_form" model="ir.ui.view">
+        <field name="name">opd.details.form</field>
+        <field name="model">opd.details</field>
+        <field name="arch" type="xml">
+
+            <form>
+                <header>
+                    <button name="action_confirm" type="object" data-hotkey="shift+c" string="Confirm"
+                            class="oe_highlight" attrs="{'invisible': [('state','not in',['draft'])]}"/>
+                    <button name="action_done" string="Done" type="object" data-hotkey="shift+d" class="oe_highlight"
+                            context="{'testing': 123445}" attrs="{'invisible': [('state','not in',['confirmed'])]}"/>
+                    <button name="action_cancel" type="object" string="Cancel" data-hotkey="shift+q"
+                            attrs="{'invisible': [('state','not in',['draft','confirmed','done'])]}"/>
+                    <button name="action_reset" string="Reset to Draft" type="object"
+                            class="oe_highlight"
+                            attrs="{'invisible': [('state','not in',['cancel'])]}"/>
+                    <button name="action_email" type="object" class="bg-success" string="Share To Mail"/>
+
+
+                    <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,done"/>
+                </header>
+                <sheet>
+                    <div>
+                        <h1>
+                            <field name="opd_id"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group name="opd_details" string="OPD Details">
+                            <field name="opd_id"/>
+                            <field name="patient_id"/>
+                            <field name="patient_number"/>
+                            <field name="patient_address"/>
+                            <field name="patient_dob"/>
+                            <field name="patient_age"/>
+                            <field name="department_id"/>
+                            <field name="doctor_id"/>
+                            <field name="app_date"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="medicine" string="Medicine">
+                            <field name="medicine">
+                                <tree>
+                                    <field name="medicine_name"/>
+                                    <field name="medicine_use"/>
+                                    <field name="quantity"/>
+                                    <field name="price"/>
+                                    <field name="tax_id" widget="many2many_tags"/>
+                                    <field name="tax_price"/>
+                                    <field name="amount"/>
+                                </tree>
+                            </field>
+                            <group class="oe_subtotal_footer oe_right">
+                                <field name="untaxed_amount" attrs="{'invisible':[('untaxed_amount', '=',0)]}"/>
+                                <field name="taxes_amount" attrs="{'invisible':[('taxes_amount', '=',0)]}"/>
+                                <field name="total"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="opd_details_kanban" model="ir.ui.view">
+        <field name="name">opd.details.kanban</field>
+        <field name="model">opd.details</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="patient_id"/>
+                <field name="patient_dob"/>
+                <field name="patient_age"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div t-attf-class="o_kanban_card_header">
+                                <div class="oe_kanban_details">
+                                    <ul>
+                                        <li>
+                                            Name:
+                                            <field name="patient_id"/>
+                                        </li>
+                                        <li>
+                                            DOB:
+                                            <field name="patient_dob"/>
+                                        </li>
+                                        <li>
+                                            Age:
+                                            <field name="patient_age"/>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="opd_template_email" model="mail.template">
+        <field name="name">Opd Email</field>
+        <field name="model_id" ref="clinic_management.model_opd_details"/>
+        <field name="email_from">{{ (user.email) }}</field>
+        <field name="email_to">{{ (object.patient_id.patient_email) }}</field>
+        <field name="body_html" type="html">
+            <div style="margin: 0px; padding:0px;">
+                <p style="margin: 0px; padding:0px; font-size: 13px;">
+                    Dear
+                    <t t-out="object.patient_id.patient_name"/>
+                    <br/>
+                    <br/>
+                    Your Opd Details is with reference
+                    <t t-out="object.opd_id"/>
+                    <br/>
+                </p>
+            </div>
+        </field>
+        <field name="report_template" ref="Clinic_report"/>
+    </record>
+
+
+    <menuitem id="opd_menu"
+              name="OPD"
+              parent="clinic_menu_root"/>
+
+    <menuitem id="opd_details_menu"
+              name="OPD Details"
+              parent="opd_menu"
+              action="opd_details_action"/>
+</odoo>

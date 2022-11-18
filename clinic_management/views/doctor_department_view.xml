@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="doctor_department_action" model="ir.actions.act_window">
+        <field name="name">Doctor Department</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">doctor.department</field>
+        <field name="view_mode">tree,form,kanban,graph</field>
+        <field name="context">{}</field>
+    </record>
+
+    <record id="doctor_department_tree" model="ir.ui.view">
+        <field name="name">doctor.department.tree</field>
+        <field name="model">doctor.department</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="doctor_department"/>
+                <field name="doctor_ids"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="doctor_department_form" model="ir.ui.view">
+        <field name="name">doctor.department.form</field>
+        <field name="model">doctor.department</field>
+        <field name="arch" type="xml">
+
+            <form>
+                <sheet>
+                    <group>
+                        <group name="doctor_department" string="Doctor Department">
+                            <field name="doctor_department"/>
+                            <field name="doctor_ids">
+                                <tree>
+                                    <field name="doctor_name"/>
+                                </tree>
+                                <form>
+                                    <sheet>
+                                        <group>
+                                            <field name="doctor_name"/>
+                                        </group>
+                                    </sheet>
+                                </form>
+                            </field>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <menuitem id="doctor_department_menu"
+              name="Doctor Department"
+              parent="doctor_menu"
+              action="doctor_department_action"/>
+</odoo>

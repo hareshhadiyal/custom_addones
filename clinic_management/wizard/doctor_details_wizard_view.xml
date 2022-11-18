@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="doctor_wizard_form" model="ir.ui.view">
+        <field name="name">doctor.wizard.form</field>
+        <field name="model">doctor.wizard</field>
+        <field name="arch" type="xml">
+
+            <form>
+                <sheet>
+                    <group>
+                        <group name="doctor_details" string="Doctor Details">
+                            <field name="doctor_department_id"/>
+
+<!--                            use domain in xml file       -->
+
+                            <field name="doctor_name_id" domain="[('depart_id', '=', doctor_department_id)]"/>
+                            <field name="app_date"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="create_opd_action" type="object" string="Create OPD"/>
+                        <button name="all_opd" type="object" string="View All OPD"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="doctor_wizard_action" model="ir.actions.act_window">
+        <field name="name">Doctor Wizard Details</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">doctor.wizard</field>
+        <field name="view_mode">tree,form,kanban,graph</field>
+        <field name="context">{}</field>
+        <field name="view_id" ref="doctor_wizard_form"/>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

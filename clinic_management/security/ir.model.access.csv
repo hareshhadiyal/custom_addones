@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+clinic_management.access_patient_admin,access_patient_details,clinic_management.model_patient_details,clinic_management.group_clinic_admin,1,1,1,1
+clinic_management.access_patient_readonly,access_patient_details,clinic_management.model_patient_details,clinic_management.group_clinic_patient_details,1,0,0,0
+
+clinic_management.access_doctor_details,access_doctor_details,clinic_management.model_doctor_details,base.group_user,1,1,1,1
+
+clinic_management.access_opd_details,access_opd_details,clinic_management.model_opd_details,clinic_management.group_clinic_admin,1,1,1,1
+clinic_management.access_opd_readonly,access_opd_details,clinic_management.model_opd_details,clinic_management.group_clinic_doctor_details,1,1,1,1
+clinic_management.access_opd_doctor,access_opd_details,clinic_management.model_opd_details,clinic_management.group_clinic_patient_details,1,0,0,0
+
+clinic_management.access_doctor_wizard,access_doctor_wizard,clinic_management.model_doctor_wizard,base.group_user,1,1,1,1
+clinic_management.access_doctor_department,access_doctor_department,clinic_management.model_doctor_department,base.group_user,1,1,1,1
+clinic_management.access_opd_medicine,access_opd_medicine,clinic_management.model_opd_medicine,base.group_user,1,1,1,1

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="department_demo_1" model="doctor.department">
+            <field name="doctor_department">Neuro</field>
+        </record>
+
+        <record id="department_demo_line_1" model="doctor.details">
+            <field name="depart_id" ref="department_demo_1"/>
+            <field name="doctor_name">doctor 4</field>
+            <field name="doctor_address">12,Vanraj</field>
+            <field name="doctor_dob">1980-03-12</field>
+            <field name="doctor_age">23</field>
+        </record>
+
+        <record id="department_demo_line_2" model="doctor.details">
+            <field name="depart_id" ref="department_demo_1"/>
+            <field name="doctor_name">doctor 5</field>
+            <field name="doctor_address">12,Gokul</field>
+            <field name="doctor_dob">1983-04-12</field>
+            <field name="doctor_age">34</field>
+        </record>
+
+    </data>
+</odoo>

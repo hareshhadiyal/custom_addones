@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="patient_demo_1" model="patient.details">
+            <field name="patient_name">xyz</field>
+            <field name="patient_address">12,gdsv</field>
+            <field name="patient_dob">2002-03-12</field>
+            <field name="patient_age">17</field>
+        </record>
+
+        <record id="patient_demo_2" model="patient.details">
+            <field name="patient_name">abc</field>
+            <field name="patient_address">12,asfdsadgsd</field>
+            <field name="patient_dob">2000-12-12</field>
+            <field name="patient_age">12</field>
+        </record>
+
+
+    </data>
+</odoo>

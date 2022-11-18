@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_opd_details_document">
+        <t t-call="web.external_layout">
+            <h1>Patient Opd Report</h1>
+
+            <div class="page">
+                <div class="oe_structure"/>
+                <h4 class="mt16">
+                    <t t-if="not (env.context.get('proforma', False) or is_pro_forma)">
+                        <span t-if="doc.state not in ['draft','confirmed']">#</span>
+                        <span t-if="doc.state in ['draft','confirmed']">checkup#</span>
+                    </t>
+                    <span t-field="doc.opd_id"/>
+                </h4>
+            </div>
+
+            <div>
+
+                <br>
+                    Patient Name:
+                    <t t-esc="doc.patient_id.patient_name"/>
+                </br>
+
+                <br>
+                    Birth Date:
+                    <t t-esc="doc.patient_dob"/>
+                </br>
+
+                <br>
+                    patient age:
+                    <t t-esc="doc.patient_age"/>
+                </br>
+
+                <br>
+                    Phone number:
+                    <t t-esc="doc.patient_number"/>
+                </br>
+
+                <br>
+                    Address:
+                    <t t-esc="doc.patient_address"/>
+                </br>
+
+            </div>
+
+            <div class="row mt50 mb32" id="informations">
+
+                <div t-if="doc.app_date" class="col-auto col-4 mw-100 mb-2">
+                    <strong>Date:</strong>
+                    <p class="m-0" t-field="doc.app_date"/>
+                </div>
+
+                <div t-if="doc.doctor_id" class="col-auto col-4 mw-100 mb-2">
+                    <strong>Your doctor:</strong>
+                    <p class="m-0" t-field="doc.doctor_id"/>
+                </div>
+
+                <div t-if="doc.department_id" class="col-auto col-4 mw-100 mb-2">
+                    <strong>Doctor department:</strong>
+                    <p class="m-0" t-field="doc.department_id"/>
+                </div>
+
+            </div>
+
+            <table t-if="doc.medicine" class="table table-bordered">
+                <thead style="display: table-row-group">
+                    <tr>
+                        <th name="th_medicine_name" class="text-left bg-info">medicine name</th>
+                        <th name="th_medicine_use" class="text-right bg-info">medicine use</th>
+                        <th name="th_quantity" class="text-right bg-info">Quantity</th>
+                        <th name="th_price" class="text-right bg-info">Price</th>
+                        <th name="th_tax_id" class="text-right bg-info">Taxes</th>
+                        <th name="th_tax_price" class="text-right bg-info">Taxes Price</th>
+                        <th name="th_amount" class="text-right bg-info">Amount</th>
+                    </tr>
+                </thead>
+
+                <tbody class="medicine_tbody">
+                    <t t-foreach="doc.medicine" t-as="line">
+                        <tr t-att-class="'bg-200 font-weight-bold o_line_section'">
+                            <td name="td_name">
+                                <span t-field="line.medicine_name"/>
+                            </td>
+                            <td name="td_quantity" class="text-right">
+                                <span t-field="line.medicine_use"/>
+                            </td>
+                            <td name="td_quantity" class="text-right">
+                                <span t-field="line.quantity"/>
+                            </td>
+                            <td name="td_quantity" class="text-right">
+                                <span t-field="line.price"/>
+                            </td>
+                            <td name="td_quantity" class="text-right badge rounded-pill bg-secondary">
+                                <span t-field="line.tax_id"/>
+                            </td>
+                            <td name="td_quantity" class="text-right">
+                                <span t-field="line.tax_price"/>
+                            </td>
+                            <td name="td_quantity" class="text-right">
+                                <span t-field="line.amount"/>
+                            </td>
+                        </tr>
+                    </t>
+                    <tr>
+                        <td name="td_quantity" class="text-center" colspan="6">
+                            <strong>Total</strong>
+                        </td>
+                        <td name="td_quantity" class="text-right bg-warning">
+                            <span t-field="doc.total"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="text-body text-right" style='word-spacing:5px'>
+                <strong>Untaxed Amount :</strong>
+                <span t-field="doc.untaxed_amount"/>
+            </div>
+            <div class="text-body text-right" style='word-spacing:5px'>
+                <strong>Taxes Amount :</strong>
+                <span t-field="doc.taxes_amount"/>
+            </div>
+            <div class="text-body text-right" style='word-spacing:5px'>
+                <strong>Total Amount :</strong>
+                <span t-field="doc.total"/>
+            </div>
+        </t>
+    </template>
+
+    <template id="report_clinic">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="clinic_management.report_opd_details_document"/>
+            </t>
+        </t>
+    </template>
+</odoo>

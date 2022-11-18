@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="doctor_demo_1" model="doctor.details">
+            <field name="doctor_name">doctor 1</field>
+            <field name="doctor_address">12,gdsv</field>
+            <field name="doctor_dob">2002-03-12</field>
+            <field name="doctor_age">47</field>
+        </record>
+
+        <record id="doctor_demo_2" model="doctor.details">
+            <field name="doctor_name">doctor 2</field>
+            <field name="doctor_address">42,sfghfhgfdf</field>
+            <field name="doctor_age">87</field>
+        </record>
+
+    </data>
+</odoo>

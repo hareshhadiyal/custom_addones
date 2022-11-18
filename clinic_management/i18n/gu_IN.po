@@ -1,0 +1,502 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* clinic_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-10 13:35+0000\n"
+"PO-Revision-Date: 2022-11-10 13:35+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: clinic_management
+#: model:ir.actions.report,print_report_name:clinic_management.Clinic_report
+msgid "'patient_report'"
+msgstr "દર્દી_અહેવાલ"
+
+#. module: clinic_management
+#: model_terms:ir.ui.view,arch_db:clinic_management.doctor_details_form
+msgid "<span class=\"o_stat_text\">Opd Count</span>"
+msgstr "<span class=\"o_stat_text\">ઓપીડી કાઉન્ટ</span>"
+
+#. module: clinic_management
+#: model_terms:ir.ui.view,arch_db:clinic_management.patient_details_form
+msgid "<span class=\"o_stat_text\">Total OPD</span>"
+msgstr "<span class=\"o_stat_text\">કુલ ઓ.પી.ડી</span>"
+
+#. module: clinic_management
+#: model_terms:ir.ui.view,arch_db:clinic_management.report_opd_details_document
+msgid "<strong>Date:</strong>"
+msgstr "<strong>તારીખ:</strong>"
+
+#. module: clinic_management
+#: model_terms:ir.ui.view,arch_db:clinic_management.report_opd_details_document
+msgid "<strong>Doctor department:</strong>"
+msgstr "<strong>ડૉક્ટર વિભાગ:</strong>"
+
+#. module: clinic_management
+#: model_terms:ir.ui.view,arch_db:clinic_management.report_opd_details_document
+msgid "<strong>Taxes Amount :</strong>"
+msgstr "<strong>કરની રકમ :</strong>"
+
+#. module: clinic_management
+#: model_terms:ir.ui.view,arch_db:clinic_management.report_opd_details_document
+msgid "<strong>Total Amount :</strong>"
+msgstr "<strong>કુલ રકમ :</strong>"
+
+#. module: clinic_management
+#: model_terms:ir.ui.view,arch_db:clinic_management.report_opd_details_document
+msgid "<strong>Total</strong>"
+msgstr "<strong>કુલ</strong>"
+
+#. module: clinic_management
+#: model_terms:ir.ui.view,arch_db:clinic_management.report_opd_details_document
+msgid "<strong>Untaxed Amount :</strong>"
+msgstr "<strong>ટેક્ષ વગરની રકમ :</strong>"
+
+#. module: clinic_management
+#: model_terms:ir.ui.view,arch_db:clinic_management.report_opd_details_document
+msgid "<strong>Your doctor:</strong>"
+msgstr "<strong>તમારા ડૉક્ટર:</strong>"
+
+#. module: clinic_management
+#: model:ir.model.fields,field_description:clinic_management.field_doctor_details__doctor_address
+#: model:ir.model.fields,field_description:clinic_management.field_opd_details__patient_address
+#: model:ir.model.fields,field_description:clinic_management.field_patient_details__patient_address
+msgid "Address 1"
+msgstr "સરનામું 1"
+
+#. module: clinic_management
+#: model_terms:ir.ui.view,arch_db:clinic_management.report_opd_details_document
+msgid "Address:"
+msgstr "સરનામું:"
+
+#. module: clinic_management
+#: model:ir.model.fields,field_description:clinic_management.field_doctor_details__doctor_age
+#: model:ir.model.fields,field_description:clinic_management.field_opd_details__patient_age
+#: model:ir.model.fields,field_description:clinic_management.field_patient_details__patient_age
+msgid "Age"
+msgstr "ઉંમર"
+
+#. module: clinic_management
+#: model_terms:ir.ui.view,arch_db:clinic_management.opd_details_kanban
+msgid "Age:"
+msgstr "ઉંમર"
+
+#. module: clinic_management
+#: model:ir.model.fields,field_description:clinic_management.field_opd_medicine__amount
+#: model_terms:ir.ui.view,arch_db:clinic_management.report_opd_details_document
+msgid "Amount"
+msgstr "રકમ"
+
+#. module: clinic_management
+#: model_terms:ir.ui.view,arch_db:clinic_management.report_opd_details_document
+msgid "Birth Date:"
+msgstr "જન્મતારીખ :"
+
+#. module: clinic_management
+#: model:ir.model.fields.selection,name:clinic_management.selection__opd_details__state__cancel
+#: model_terms:ir.ui.view,arch_db:clinic_management.opd_details_form
+msgid "Cancel"
+msgstr "રદ કરો"
+
+#. module: clinic_management
+#: model:ir.ui.menu,name:clinic_management.clinic_menu_root
+msgid "Clinic"
+msgstr "ક્લિનિક"
+
+#. module: clinic_management
+#: model:ir.actions.report,name:clinic_management.Clinic_report
+msgid "Clinic report"
+msgstr "ક્લિનિક રિપોર્ટ"
+
+#. module: clinic_management
+#: model_terms:ir.ui.view,arch_db:clinic_management.opd_details_form
+msgid "Confirm"
+msgstr "પુષ્ટિ કરો"
+
+#. module: clinic_management
+#: model:ir.model.fields.selection,name:clinic_management.selection__opd_details__state__confirmed
+msgid "Confirmed"
+msgstr "પુષ્ટિ"
+
+#. module: clinic_management
+#: model_terms:ir.ui.view,arch_db:clinic_management.doctor_wizard_form
+#: model_terms:ir.ui.view,arch_db:clinic_management.patient_details_form
+msgid "Create OPD"
+msgstr "OPD બનાવો"
+
+#. module: clinic_management
+#: model_terms:ir.ui.view,arch_db:clinic_management.doctor_details_form
+#: model_terms:ir.ui.view,arch_db:clinic_management.patient_details_form
+msgid "Create User"
+msgstr "વપરાશકર્તા બનાવો"
+
+#. module: clinic_management
+#: model:ir.model.fields,field_description:clinic_management.field_doctor_department__create_uid
+#: model:ir.model.fields,field_description:clinic_management.field_doctor_details__create_uid
+#: model:ir.model.fields,field_description:clinic_management.field_doctor_wizard__create_uid
+#: model:ir.model.fields,field_description:clinic_management.field_opd_details__create_uid
+#: model:ir.model.fields,field_description:clinic_management.field_opd_medicine__create_uid
+#: model:ir.model.fields,field_description:clinic_management.field_patient_details__create_uid
+msgid "Created by"
+msgstr "આના દ્વારા બનાવો"
+
+#. module: clinic_management
+#: model:ir.model.fields,field_description:clinic_management.field_doctor_department__create_date
+#: model:ir.model.fields,field_description:clinic_management.field_doctor_details__create_date
+#: model:ir.model.fields,field_description:clinic_management.field_doctor_wizard__create_date
+#: model:ir.model.fields,field_description:clinic_management.field_opd_details__create_date
+#: model:ir.model.fields,field_description:clinic_management.field_opd_medicine__create_date
+#: model:ir.model.fields,field_description:clinic_management.field_patient_details__create_date
+msgid "Created on"
+msgstr "પર બનાવો"
+
+#. module: clinic_management
+#: model_terms:ir.ui.view,arch_db:clinic_management.opd_details_kanban
+msgid "DOB:"
+msgstr "ડીઓબી"
+
+#. module: clinic_management
+#: model:ir.model.fields,field_description:clinic_management.field_doctor_wizard__app_date
+#: model:ir.model.fields,field_description:clinic_management.field_opd_details__app_date
+msgid "Date"
+msgstr "તારીખ"
+
+#. module: clinic_management
+#: model:ir.model.fields,field_description:clinic_management.field_doctor_details__doctor_dob
+#: model:ir.model.fields,field_description:clinic_management.field_opd_details__patient_dob
+#: model:ir.model.fields,field_description:clinic_management.field_patient_details__patient_dob
+msgid "Date Of Birth"
+msgstr "જન્મ તારીખ"
+
+#. module: clinic_management
+#: model:ir.model.fields,field_description:clinic_management.field_doctor_details__depart_id
+msgid "Depart"
+msgstr "પ્રસ્થાન"
+
+#. module: clinic_management
+#: model:ir.model.fields,field_description:clinic_management.field_doctor_department__doctor_department
+#: model:ir.model.fields,field_description:clinic_management.field_doctor_wizard__doctor_department_id
+#: model:ir.model.fields,field_description:clinic_management.field_opd_details__department_id
+msgid "Department"
+msgstr "વિભાગ"
+
+#. module: clinic_management
+#: model:ir.model.fields,field_description:clinic_management.field_doctor_department__display_name
+#: model:ir.model.fields,field_description:clinic_management.field_doctor_details__display_name
+#: model:ir.model.fields,field_description:clinic_management.field_doctor_wizard__display_name
+#: model:ir.model.fields,field_description:clinic_management.field_opd_details__display_name
+#: model:ir.model.fields,field_description:clinic_management.field_opd_medicine__display_name
+#: model:ir.model.fields,field_description:clinic_management.field_patient_details__display_name
+msgid "Display Name"
+msgstr "ડિસ્પ્લે નામ"
+
+#. module: clinic_management
+#: model:ir.model.fields,field_description:clinic_management.field_opd_details__doctor_id
+#: model:ir.ui.menu,name:clinic_management.doctor_menu
+#: model:res.groups,name:clinic_management.group_clinic_doctor_details
+msgid "Doctor"
+msgstr "ડોક્ટર"
+
+#. module: clinic_management
+#: model:ir.actions.act_window,name:clinic_management.doctor_department_action
+#: model:ir.ui.menu,name:clinic_management.doctor_department_menu
+#: model_terms:ir.ui.view,arch_db:clinic_management.doctor_department_form
+msgid "Doctor Department"
+msgstr "ડૉક્ટર વિભાગ"
+
+#. module: clinic_management
+#: model:ir.actions.act_window,name:clinic_management.doctor_details_action
+#: model:ir.ui.menu,name:clinic_management.doctor_details_menu
+#: model_terms:ir.ui.view,arch_db:clinic_management.doctor_details_form
+#: model_terms:ir.ui.view,arch_db:clinic_management.doctor_wizard_form
+msgid "Doctor Details"
+msgstr "ડૉક્ટર વિગતો"
+
+#. module: clinic_management
+#: model:ir.model.fields,field_description:clinic_management.field_doctor_details__doctor_name
+#: model:ir.model.fields,field_description:clinic_management.field_doctor_wizard__doctor_name_id
+msgid "Doctor Name"
+msgstr "ડૉક્ટરનું નામ"
+
+#. module: clinic_management
+#: model:ir.model.fields,field_description:clinic_management.field_doctor_details__doctor_number
+msgid "Doctor Number"
+msgstr "ડોક્ટર નંબર"
+
+#. module: clinic_management
+#: model:ir.actions.act_window,name:clinic_management.doctor_wizard_action
+msgid "Doctor Wizard Details"
+msgstr "ડૉક્ટર વિઝાર્ડ વિગતો"
+
+#. module: clinic_management
+#: model:ir.model.fields,field_description:clinic_management.field_doctor_department__doctor_ids
+msgid "Doctors"
+msgstr "ડોકટરો"
+
+#. module: clinic_management
+#: model:ir.model.fields.selection,name:clinic_management.selection__opd_details__state__done
+#: model_terms:ir.ui.view,arch_db:clinic_management.opd_details_form
+msgid "Done"
+msgstr "પૂર્ણ"
+
+#. module: clinic_management
+#: model:ir.model.fields.selection,name:clinic_management.selection__opd_details__state__draft
+msgid "Draft"
+msgstr "ડ્રાફ્ટ"
+
+#. module: clinic_management
+#: model:ir.model.fields,field_description:clinic_management.field_opd_medicine__medicine_use
+msgid "How to Use"
+msgstr "કેવી રીતે વાપરવું"
+
+#. module: clinic_management
+#: model:ir.model.fields,field_description:clinic_management.field_doctor_department__id
+#: model:ir.model.fields,field_description:clinic_management.field_doctor_details__id
+#: model:ir.model.fields,field_description:clinic_management.field_doctor_wizard__id
+#: model:ir.model.fields,field_description:clinic_management.field_opd_details__id
+#: model:ir.model.fields,field_description:clinic_management.field_opd_medicine__id
+#: model:ir.model.fields,field_description:clinic_management.field_patient_details__id
+msgid "ID"
+msgstr "આઈડી"
+
+#. module: clinic_management
+#: model:ir.model.fields,field_description:clinic_management.field_doctor_department____last_update
+#: model:ir.model.fields,field_description:clinic_management.field_doctor_details____last_update
+#: model:ir.model.fields,field_description:clinic_management.field_doctor_wizard____last_update
+#: model:ir.model.fields,field_description:clinic_management.field_opd_details____last_update
+#: model:ir.model.fields,field_description:clinic_management.field_opd_medicine____last_update
+#: model:ir.model.fields,field_description:clinic_management.field_patient_details____last_update
+msgid "Last Modified on"
+msgstr "છેલ્લે સંશોધિત"
+
+#. module: clinic_management
+#: model:ir.model.fields,field_description:clinic_management.field_doctor_department__write_uid
+#: model:ir.model.fields,field_description:clinic_management.field_doctor_details__write_uid
+#: model:ir.model.fields,field_description:clinic_management.field_doctor_wizard__write_uid
+#: model:ir.model.fields,field_description:clinic_management.field_opd_details__write_uid
+#: model:ir.model.fields,field_description:clinic_management.field_opd_medicine__write_uid
+#: model:ir.model.fields,field_description:clinic_management.field_patient_details__write_uid
+msgid "Last Updated by"
+msgstr "દ્વારા છેલ્લે અપડેટ કરવામાં આવ્યું હતું"
+
+#. module: clinic_management
+#: model:ir.model.fields,field_description:clinic_management.field_doctor_department__write_date
+#: model:ir.model.fields,field_description:clinic_management.field_doctor_details__write_date
+#: model:ir.model.fields,field_description:clinic_management.field_doctor_wizard__write_date
+#: model:ir.model.fields,field_description:clinic_management.field_opd_details__write_date
+#: model:ir.model.fields,field_description:clinic_management.field_opd_medicine__write_date
+#: model:ir.model.fields,field_description:clinic_management.field_patient_details__write_date
+msgid "Last Updated on"
+msgstr "છેલ્લે અપડેટ થયેલ"
+
+#. module: clinic_management
+#: model:ir.model.fields,field_description:clinic_management.field_opd_details__medicine
+#: model:ir.model.fields,field_description:clinic_management.field_opd_medicine__medicine_name
+#: model_terms:ir.ui.view,arch_db:clinic_management.opd_details_form
+msgid "Medicine"
+msgstr "દવા"
+
+#. module: clinic_management
+#: model_terms:ir.ui.view,arch_db:clinic_management.opd_details_kanban
+msgid "Name:"
+msgstr "નામ:"
+
+#. module: clinic_management
+#: model:ir.ui.menu,name:clinic_management.opd_menu
+msgid "OPD"
+msgstr "ઓપીડી"
+
+#. module: clinic_management
+#: model:ir.actions.act_window,name:clinic_management.opd_details_action
+#: model:ir.ui.menu,name:clinic_management.opd_details_menu
+#: model_terms:ir.ui.view,arch_db:clinic_management.opd_details_form
+msgid "OPD Details"
+msgstr "ઓપીડી વિગતો"
+
+#. module: clinic_management
+#: model:ir.model.fields,field_description:clinic_management.field_opd_details__opd_id
+msgid "Opd"
+msgstr "ઓપીડી"
+
+#. module: clinic_management
+#: model:ir.ui.menu,name:clinic_management.patient_menu
+#: model:res.groups,name:clinic_management.group_clinic_patient_details
+msgid "Patient"
+msgstr "દર્દી"
+
+#. module: clinic_management
+#: model:ir.actions.act_window,name:clinic_management.patient_details_action
+#: model:ir.ui.menu,name:clinic_management.patient_details_menu
+#: model_terms:ir.ui.view,arch_db:clinic_management.patient_details_form
+msgid "Patient Details"
+msgstr "દર્દીની વિગતો"
+
+#. module: clinic_management
+#: model:ir.model.fields,field_description:clinic_management.field_opd_details__patient_id
+#: model:ir.model.fields,field_description:clinic_management.field_patient_details__patient_name
+msgid "Patient Name"
+msgstr "દર્દીનું નામ"
+
+#. module: clinic_management
+#: model_terms:ir.ui.view,arch_db:clinic_management.report_opd_details_document
+msgid "Patient Name:"
+msgstr "દર્દીનું નામ:"
+
+#. module: clinic_management
+#: model:ir.model.fields,field_description:clinic_management.field_opd_details__patient_number
+#: model:ir.model.fields,field_description:clinic_management.field_patient_details__patient_number
+msgid "Patient Number"
+msgstr "દર્દી નંબર"
+
+#. module: clinic_management
+#: model_terms:ir.ui.view,arch_db:clinic_management.report_opd_details_document
+msgid "Patient Opd Report"
+msgstr "દર્દી ઓપીડી રિપોર્ટ"
+
+#. module: clinic_management
+#: model_terms:ir.ui.view,arch_db:clinic_management.report_opd_details_document
+msgid "Phone number:"
+msgstr "ફોન નંબર:"
+
+#. module: clinic_management
+#: model:ir.model.fields,field_description:clinic_management.field_opd_medicine__price
+#: model_terms:ir.ui.view,arch_db:clinic_management.report_opd_details_document
+msgid "Price"
+msgstr "કિંમત"
+
+#. module: clinic_management
+#: model:ir.model.fields,field_description:clinic_management.field_opd_medicine__quantity
+#: model_terms:ir.ui.view,arch_db:clinic_management.report_opd_details_document
+msgid "Quantity"
+msgstr "જથ્થો"
+
+#. module: clinic_management
+#: model_terms:ir.ui.view,arch_db:clinic_management.opd_details_form
+msgid "Reset to Draft"
+msgstr "ડ્રાફ્ટ પર રીસેટ કરો"
+
+#. module: clinic_management
+#: model:ir.model.fields,field_description:clinic_management.field_opd_details__state
+msgid "State"
+msgstr "રાજ્ય"
+
+#. module: clinic_management
+#: model:ir.model.fields,field_description:clinic_management.field_opd_medicine__tax_price
+msgid "Tax Price"
+msgstr "કર કિંમત"
+
+#. module: clinic_management
+#: model:ir.model.fields,field_description:clinic_management.field_opd_medicine__tax_id
+#: model_terms:ir.ui.view,arch_db:clinic_management.report_opd_details_document
+msgid "Taxes"
+msgstr "કર"
+
+#. module: clinic_management
+#: model:ir.model.fields,field_description:clinic_management.field_opd_details__taxes_amount
+msgid "Taxes Amount"
+msgstr "કર રકમ"
+
+#. module: clinic_management
+#: model_terms:ir.ui.view,arch_db:clinic_management.report_opd_details_document
+msgid "Taxes Price"
+msgstr "કર કિંમત"
+
+#. module: clinic_management
+#: model:ir.model.fields,field_description:clinic_management.field_opd_details__total
+#: model:ir.model.fields,field_description:clinic_management.field_opd_medicine__total
+msgid "Total"
+msgstr "કુલ"
+
+#. module: clinic_management
+#: model:ir.model.fields,field_description:clinic_management.field_patient_details__total_opd
+msgid "Total Opd"
+msgstr "કુલ ઓપીડી"
+
+#. module: clinic_management
+#: model:ir.model.fields,field_description:clinic_management.field_doctor_details__total_opd_visit
+msgid "Total Opd Visit"
+msgstr "કુલ ઓપીડી મુલાકાત"
+
+#. module: clinic_management
+#: model:ir.model.fields,field_description:clinic_management.field_opd_details__untaxed_amount
+msgid "Untaxed Amount"
+msgstr "કર વગરની રકમ"
+
+#. module: clinic_management
+#: model:ir.model.fields,field_description:clinic_management.field_doctor_details__user_id
+#: model:ir.model.fields,field_description:clinic_management.field_patient_details__user_id
+msgid "User Id"
+msgstr "યુઝર આઈડી"
+
+#. module: clinic_management
+#: model_terms:ir.ui.view,arch_db:clinic_management.doctor_wizard_form
+msgid "View All OPD"
+msgstr "બધી ઓપીડી જુઓ"
+
+#. module: clinic_management
+#: model:res.groups,name:clinic_management.group_clinic_admin
+msgid "admin"
+msgstr "એડમિન"
+
+#. module: clinic_management
+#: model_terms:ir.ui.view,arch_db:clinic_management.report_opd_details_document
+msgid "checkup#"
+msgstr "ચકાસણી#"
+
+#. module: clinic_management
+#: model:ir.module.category,name:clinic_management.module_category_clinic
+msgid "clinic Management"
+msgstr "ક્લિનિક મેનેજમેન્ટ"
+
+#. module: clinic_management
+#: model:ir.model,name:clinic_management.model_doctor_department
+msgid "doctor.department"
+msgstr "ડૉક્ટર.વિભાગ"
+
+#. module: clinic_management
+#: model:ir.model,name:clinic_management.model_doctor_details
+msgid "doctor.details"
+msgstr "ડૉક્ટર.વિગતો"
+
+#. module: clinic_management
+#: model:ir.model,name:clinic_management.model_doctor_wizard
+msgid "doctor.wizard"
+msgstr "ડૉક્ટર.વિઝાર્ડ"
+
+#. module: clinic_management
+#: model_terms:ir.ui.view,arch_db:clinic_management.report_opd_details_document
+msgid "medicine name"
+msgstr "દવાનું નામ"
+
+#. module: clinic_management
+#: model_terms:ir.ui.view,arch_db:clinic_management.report_opd_details_document
+msgid "medicine use"
+msgstr "દવાનો ઉપયોગ"
+
+#. module: clinic_management
+#: model:ir.model,name:clinic_management.model_opd_details
+msgid "opd.details"
+msgstr "opd.વિગતો"
+
+#. module: clinic_management
+#: model:ir.model,name:clinic_management.model_opd_medicine
+msgid "opd.medicine"
+msgstr "ઓપીડી. દવા"
+
+#. module: clinic_management
+#: model_terms:ir.ui.view,arch_db:clinic_management.report_opd_details_document
+msgid "patient age:"
+msgstr "દર્દીની ઉંમર:"
+
+#. module: clinic_management
+#: model:ir.model,name:clinic_management.model_patient_details
+msgid "patient.details"
+msgstr "દર્દી.વિગતો"

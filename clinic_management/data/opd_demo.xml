@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="opd_demo_1" model="opd.details">
+            <field name="patient_id" ref="patient_demo_1"/>
+            <field name="patient_address">12,gdsv</field>
+            <field name="patient_dob">2002-03-12</field>
+            <field name="patient_age">34</field>
+            <field name="doctor_id" ref="doctor_demo_1"/>
+        </record>
+
+        <record id="opd_demo_2" model="opd.details">
+            <field name="patient_id" ref="patient_demo_2"/>
+            <field name="patient_address">343,gdsv</field>
+            <field name="patient_age">67</field>
+            <field name="patient_dob">1980-03-02</field>
+            <field name="doctor_id" ref="doctor_demo_2"/>
+        </record>
+
+
+    </data>
+</odoo>

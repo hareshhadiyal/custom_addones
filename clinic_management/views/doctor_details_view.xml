@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sequence_doctor" model="ir.sequence">
+        <field name="name">Doctor Sequence</field>
+        <field name="code">doctor.details</field>
+        <field name="prefix">D</field>
+        <field name="padding">2</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <record id="doctor_details_action" model="ir.actions.act_window">
+        <field name="name">Doctor Details</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">doctor.details</field>
+        <field name="view_mode">tree,form,kanban,graph</field>
+        <field name="context">{}</field>
+    </record>
+
+    <record id="doctor_details_tree" model="ir.ui.view">
+        <field name="name">doctor.details.tree</field>
+        <field name="model">doctor.details</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="doctor_number"/>
+                <field name="doctor_name"/>
+                <field name="doctor_address"/>
+                <field name="doctor_dob"/>
+                <field name="doctor_age"/>
+                <field name="depart_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="doctor_details_form" model="ir.ui.view">
+        <field name="name">doctor.details.form</field>
+        <field name="model">doctor.details</field>
+        <field name="arch" type="xml">
+
+            <form>
+                <header>
+                     <button name="create_doctor" string="Create User"
+                            type="object" class="oe_highlight"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="total_count_visit" class="oe_stat_button" type="object" icon="fa-pencil-square-o">
+                            <div class="o_stat_info">
+                                <field name="total_opd_visit" class="o_stat_value"/>
+                                <span class="o_stat_text">Opd Count</span>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div>
+                        <h1>
+                            <field name="doctor_number"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group name="doctor_details" string="Doctor Details">
+                            <field name="doctor_name"/>
+                            <field name="user_id"/>
+                            <field name="doctor_address"/>
+                            <field name="doctor_dob"/>
+                            <field name="doctor_age"/>
+                            <field name="depart_id"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <menuitem id="doctor_menu"
+              name="Doctor"
+              parent="clinic_menu_root"/>
+
+    <menuitem id="doctor_details_menu"
+              name="Doctor Details"
+              parent="doctor_menu"
+              action="doctor_details_action"/>
+
+</odoo>
