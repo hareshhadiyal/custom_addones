@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+
+    <record id="sequence_booking" model="ir.sequence">
+        <field name="name">Booking Sequence</field>
+        <field name="code">booking.booking</field>
+        <field name="prefix">A</field>
+        <field name="padding">3</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+
+    <record id="hotel_booking_action" model="ir.actions.act_window">
+        <field name="name">Hotel Management</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">booking.booking</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="context">{}</field>
+    </record>
+
+    <record id="hotel_booking_tree" model="ir.ui.view">
+        <field name="name">hotel.booking.tree</field>
+        <field name="model">booking.booking</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="customer_name"/>
+                <field name="mobile_num"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="hotel_booking_form" model="ir.ui.view">
+        <field name="name">hotel.booking.form</field>
+        <field name="model">booking.booking</field>
+        <field name="arch" type="xml">
+
+            <form>
+                <header>
+                    <button name="confirm" type="object"
+                            string="Confirm" class="oe_highlight"
+                            attrs="{'invisible': [('state','not in',['draft','cancel'])]}"/>
+
+                    <button name="cancel" string="Cancel"
+                            type="object" class="oe_highlight"
+                            attrs="{'invisible': [('state','not in',['draft','done'])]}"/>
+
+                    <button name="%(other_record_action)d" string="other"
+                            type="action" class="oe_highlight"/>
+
+                    <field name="state" widget="statusbar" class="oe_highlight" statusbar_visible="draft,confirm,done,cancel"/>
+
+                </header>
+                <sheet>
+                    <group>
+                        <field name="customer_no"/>
+                        <field name="customer_name"/>
+                        <field name="gender"/>
+                        <field name="room_no"/>
+                        <field name="room_type"/>
+                        <field name="mobile_num"/>
+                        <field name="email_id"/>
+                        <field name="payment_line"/>
+                        <field name="other_info"/>
+
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <menuitem id="hotel_management_menu_root"
+              name="Hotel Management"/>
+
+    <menuitem id="booking_menu"
+              name="Booking"
+              parent="hotel_management_menu_root"/>
+
+    <menuitem id="booking_menu_details"
+              name="Booking Details"
+              parent="booking_menu"
+              action="hotel_booking_action"/>
+</odoo>

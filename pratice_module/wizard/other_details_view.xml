@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="other_record_form" model="ir.ui.view">
+        <field name="name">other.record.form</field>
+        <field name="model">other.details</field>
+        <field name="arch" type="xml">
+            <form string="other details">
+                <group>
+                    <field name="parent_name"/>
+                    <field name="parent_age"/>
+                    <field name="parent_mo"/>
+                    <field name="parent_gender"/>
+                </group>
+                <footer>
+                    <button name="btn_submit" string="Confirm" type="object" class="oe_highlight"/>
+                    <button name="btn_cancel" string="Cancel" type="object"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="other_record_action" model="ir.actions.act_window">
+        <field name="name">other details</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">other.details</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="other_record_form"/>
+        <field name="target">new</field>
+    </record>
+</odoo>

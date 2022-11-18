@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+
+    <record id="hotel_payment_action" model="ir.actions.act_window">
+        <field name="name">Hotel Management</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">payment.payment</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="context">{}</field>
+    </record>
+
+
+    <record id="hotel_payment_tree" model="ir.ui.view">
+        <field name="name">hotel.payment.tree</field>
+        <field name="model">payment.payment</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="customer_id"/>
+                <field name="payment"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="hotel_payment_form" model="ir.ui.view">
+        <field name="name">hotel.payment.form</field>
+        <field name="model">payment.payment</field>
+        <field name="arch" type="xml">
+
+            <form>
+                <sheet>
+                    <group>
+                        <field name="customer_id"/>
+                        <field name="payment"/>
+                        <field name="acc_details"/>
+                        <field name="payment_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <menuitem id="hotel_management_menu_root"
+              name="Hotel Management"/>
+
+    <menuitem id="payment_menu"
+              name="Payment"
+              parent="hotel_management_menu_root"/>
+
+    <menuitem id="payment_menu_details"
+              name="Payment Details"
+              parent="payment_menu"
+              action="hotel_payment_action"/>
+</odoo>

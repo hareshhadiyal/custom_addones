@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+pratice_module.access_booking_booking,access_booking_booking,pratice_module.model_booking_booking,base.group_user,1,1,1,1
+pratice_module.access_payment_payment,access_payment_payment,pratice_module.model_payment_payment,base.group_user,1,1,1,1
+pratice_module.access_other_details,access_other_details,pratice_module.model_other_details,base.group_user,1,1,1,1
+
+
+
+

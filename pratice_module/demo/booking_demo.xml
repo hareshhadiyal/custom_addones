@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="booking_demo_1" model="booking.booking">
+            <field name="customer_name">Viral</field>
+            <field name="gender">a</field>
+            <field name="mobile_num">756756</field>
+            <field name="other_info"
+                   eval="[(6,0,[ref('payment_demo_1'),ref('payment_demo_2')])]"/>
+        </record>
+
+        <record id="booking_demo_2" model="booking.booking">
+            <field name="customer_name">Manoj</field>
+            <field name="gender">a</field>
+            <field name="mobile_num">142432</field>
+        </record>
+
+        <record id="booking_demo_line_1" model="payment.payment">
+            <field name="payment_id" ref="booking_demo_1"/>
+            <field name="customer_id">ada12</field>
+            <field name="payment">A</field>
+        </record>
+    </data>
+</odoo>

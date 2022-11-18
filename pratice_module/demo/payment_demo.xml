@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="payment_demo_1" model="payment.payment">
+            <field name="customer_id">Viral213</field>
+            <field name="payment">A</field>
+            <field name="payment_id"
+                   ref="pratice_module.booking_demo_1"/>
+        </record>
+
+        <record id="payment_demo_2" model="payment.payment">
+            <field name="customer_id">Manoj133</field>
+            <field name="payment">C</field>
+        </record>
+    </data>
+</odoo>
